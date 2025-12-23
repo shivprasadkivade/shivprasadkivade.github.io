@@ -13,7 +13,7 @@ body{
 
 .wrapper{
     max-width: 1200px;
-    width:100%
+    width: 100%;
     display: grid;
     grid-template-columns: 350px 1fr;
     gap: 50px;
@@ -49,7 +49,7 @@ body{
 
 .pfp p{
     background-color: #1e1e1e;
-    display: inline;
+    display: inline-block;
     padding: 5px;
     font-size: 0.8rem;
     color: #FFBF00;
@@ -73,6 +73,13 @@ body{
 .cd{
     text-decoration: none;
     color: #e0e0e0;
+}
+
+.cd:focus,
+.nav a:focus {
+    outline: 3px solid rgba(255,191,0,0.25);
+    outline-offset: 2px;
+    border-radius: 6px;
 }
 
 .social{
@@ -206,7 +213,8 @@ body{
     border: 3px solid #FFBF00;
     position: absolute;
     top: 40%;
-    left: -200%;
+    left: -10px;
+    background-color: transparent;
 }
 
 .iitlogo img{
@@ -267,6 +275,7 @@ body{
 .tools{
     display: flex;
     gap: 10px;
+    margin-top: 10px;
 }
 
 .tool{
@@ -293,10 +302,6 @@ body{
     font-size: 0.9rem;
 }
 
-.tools{
-    margin-top: 10px;
-}
-
 
 @media screen and (max-width:1200px) {
     .wrapper{
@@ -315,7 +320,7 @@ body{
         grid-template-columns: 1fr;
     }
 
-    #nav div {
+    .nav div {
         /* Adjust nav for smaller screens */
         justify-content: center;
         flex-wrap: wrap;
@@ -327,4 +332,3 @@ body{
         gap: 40px;
     }
 }
-
